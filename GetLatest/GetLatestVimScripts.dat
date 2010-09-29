@@ -1,0 +1,7 @@
+ScriptID SourceID Filename
+--------------------------
+1567 13800 :AutoInstall: rails.vim
+1697 12566 :AutoInstall: surround.vim
+489 9573 :AutoInstall: Manpageview.vim
+642 8136 :AutoInstall: getscript.vim
+31 7218 :AutoInstall: a.vim

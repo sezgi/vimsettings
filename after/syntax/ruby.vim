@@ -1,0 +1,5 @@
+syn match hamlFunction "wwh"
+syn match hamlFunction "capture_haml"
+syn match hamlFunction "haml_tag"
+syn match hamlFunction "haml_concat"
+syn match rubyRailsTestMethod "describe_view"
