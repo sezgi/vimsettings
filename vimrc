@@ -89,7 +89,8 @@ set listchars=tab:»·,extends:+,precedes:<,nbsp:~,trail:·,eol:¬
 map <F4> :set list!<CR>
 
 " Search ----------------------------------------------------------------------
-set nohlsearch
+set hlsearch
+set incsearch
 set ignorecase
 map <F3> :set hlsearch!<CR>
 
