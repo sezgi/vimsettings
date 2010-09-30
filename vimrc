@@ -36,11 +36,13 @@ set fileformats=unix,dos,mac
 " Edition
 set expandtab
 set autoindent
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set smartindent
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set shiftround
 set smarttab
+set scrolloff=2
 
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set visualbell
@@ -92,7 +94,9 @@ map <F4> :set list!<CR>
 set hlsearch
 set incsearch
 set ignorecase
+set smartcase
 map <F3> :set hlsearch!<CR>
+nmap <silent> <C-N> :set hlsearch!<CR>
 
 " Enhanced Commentify  --------------------------------------------------------
 " let g:maplocalleader='c'
@@ -120,6 +124,29 @@ set pastetoggle=<F2>
 
 " Wrapping on/off -------------------------------------------------------------
 map <F6> :set wrap!<CR>
+
+" When editing a file, always jump to the last known cursor position.
+" Don't do it when the position is invalid or when inside an event handler
+" (happens when dropping a file on gvim).
+autocmd BufReadPost *
+  \ if line("'\"") > 0 && line("'\"") <= line("$") |
+  \   exe "normal! g`\"" |
+  \ endif
+
+" CleverTab
+function! CleverTab()
+  if pumvisible()
+    return "\<C-N>"
+  endif
+  if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
+    return "\<Tab>"
+  elseif exists('&omnifunc') && &omnifunc != ''
+    return "\<C-X>\<C-O>"
+  else
+    return "\<C-N>"
+  endif
+endfunction
+inoremap <Tab> <C-R>=CleverTab()<CR>
 
 " Local settings
 " let HOST_SETTINGS = $HOME . '/.settings/vim.config/Hosts/' . split(hostname(), '\.')[0] . '.vim'
