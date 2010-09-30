@@ -65,7 +65,7 @@ if has('gui_running')
         set transparency=2
     endif
 else
-    colorscheme geraud_term
+    colorscheme pastel_g
 endif
 
 " Diff ------------------------------------------------------------------------
