@@ -35,7 +35,7 @@ function! TrimWhiteSpace()
     call setpos('.', original_pos)
 endfunction
 
-autocmd FileWritePre * :call TrimWhiteSpace()
-autocmd FileAppendPre * :call TrimWhiteSpace()
-autocmd FilterWritePre * :call TrimWhiteSpace()
-autocmd BufWritePre * :call TrimWhiteSpace()
+" autocmd FileWritePre * :call TrimWhiteSpace()
+" autocmd FileAppendPre * :call TrimWhiteSpace()
+" autocmd FilterWritePre * :call TrimWhiteSpace()
+" autocmd BufWritePre * :call TrimWhiteSpace()
