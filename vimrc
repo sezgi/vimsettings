@@ -129,6 +129,9 @@ map <F6> :set wrap!<CR>
 " Exuberant ctags utility (for the taglist plugin)
 let Tlist_Ctags_Cmd = '/opt/local/bin/ctags'
 
+" Taglist mapping
+nnoremap <silent> <F8> :TlistToggle<CR>
+
 " When editing a file, always jump to the last known cursor position.
 " Don't do it when the position is invalid or when inside an event handler
 " (happens when dropping a file on gvim).
