@@ -167,9 +167,11 @@ endfunction
 inoremap <CR> <C-R>=CleverBrace()<CR>
 
 " Clever parens and quotes
-inoremap ( ()<LEFT>
-inoremap ' ''<LEFT>
-inoremap " ""<LEFT>
+inoremap ( ()<Left>
+inoremap ' ''<Left>
+inoremap " ""<Left>
+imap %% <%=  %><Left><Left><Left>
+imap %. <%  %><Left><Left><Left>
 
 " Moving between split windows
 map <C-j> <C-W><Down>
