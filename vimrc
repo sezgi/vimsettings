@@ -125,6 +125,10 @@ set pastetoggle=<F2>
 " Wrapping on/off -------------------------------------------------------------
 map <F6> :set wrap!<CR>
 
+
+" Exuberant ctags utility (for the taglist plugin)
+let Tlist_Ctags_Cmd = '/opt/local/bin/ctags'
+
 " When editing a file, always jump to the last known cursor position.
 " Don't do it when the position is invalid or when inside an event handler
 " (happens when dropping a file on gvim).
@@ -147,6 +151,12 @@ function! CleverTab()
   endif
 endfunction
 inoremap <Tab> <C-R>=CleverTab()<CR>
+
+" Moving between split windows
+map <C-j> <C-W><Down>
+map <C-k> <C-W><Up>
+map <C-h> <C-W><Left>
+map <C-l> <C-W><Right> 
 
 " Local settings
 " let HOST_SETTINGS = $HOME . '/.settings/vim.config/Hosts/' . split(hostname(), '\.')[0] . '.vim'
