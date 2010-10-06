@@ -157,6 +157,20 @@ function! CleverTab()
 endfunction
 inoremap <Tab> <C-R>=CleverTab()<CR>
 
+" CleverBrace
+function! CleverBrace()
+  if strpart( getline('.'), col('.')-2, 1 ) =~ '{'
+    return "\<CR>}\<ESC>O"
+  else
+    return "\<CR>"
+endfunction
+inoremap <CR> <C-R>=CleverBrace()<CR>
+
+" Clever parens and quotes
+inoremap ( ()<LEFT>
+inoremap ' ''<LEFT>
+inoremap " ""<LEFT>
+
 " Moving between split windows
 map <C-j> <C-W><Down>
 map <C-k> <C-W><Up>
