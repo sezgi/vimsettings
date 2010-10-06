@@ -125,6 +125,8 @@ set pastetoggle=<F2>
 " Wrapping on/off -------------------------------------------------------------
 map <F6> :set wrap!<CR>
 
+" Trim white spaces
+nnoremap <silent> <F7> :call TrimWhiteSpace()<CR>
 
 " Exuberant ctags utility (for the taglist plugin)
 let Tlist_Ctags_Cmd = '/opt/local/bin/ctags'
