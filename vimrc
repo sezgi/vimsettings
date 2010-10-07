@@ -168,8 +168,6 @@ inoremap <CR> <C-R>=CleverBrace()<CR>
 
 " Clever parens and quotes
 inoremap ( ()<Left>
-inoremap ' ''<Left>
-inoremap " ""<Left>
 imap %% <%=  %><Left><Left><Left>
 imap %. <%  %><Left><Left><Left>
 
