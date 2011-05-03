@@ -26,9 +26,11 @@ set mouse=a
 set encoding=UTF-8
 
 " Wraps around words and not letters
+set wrap
 set linebreak
-
-set nowrap
+set nolist
+set textwidth=0
+set wrapmargin=0
 
 " File formats priority:
 set fileformats=unix,dos,mac
@@ -67,7 +69,7 @@ if has('gui_running')
         set transparency=2
     endif
 else
-    colorscheme geraud_term
+    colorscheme blackboard
 endif
 
 " Diff ------------------------------------------------------------------------
@@ -166,7 +168,7 @@ function! CleverBrace()
 endfunction
 inoremap <CR> <C-R>=CleverBrace()<CR>
 
-" Clever parens and quotes
+" Clever parens
 inoremap ( ()<Left>
 imap %% <%=  %><Left><Left><Left>
 imap %. <%  %><Left><Left><Left>
