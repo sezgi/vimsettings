@@ -25,12 +25,13 @@ set backspace=indent,eol,start
 set mouse=a
 set encoding=UTF-8
 
-" Wraps around words and not letters
+" http://vim.wikia.com/wiki/Word_wrap_without_line_breaks
 set wrap
 set linebreak
 set nolist
 set textwidth=0
 set wrapmargin=0
+set formatoptions+=l
 
 " File formats priority:
 set fileformats=unix,dos,mac
