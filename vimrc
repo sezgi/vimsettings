@@ -185,3 +185,7 @@ map <C-l> <C-W><Right>
 " if filereadable(HOST_SETTINGS)
 "     execute 'source '.HOST_SETTINGS
 " endif
+"
+" RAILS STUFF
+imap r* Rails.logger.debug "*"*100<CR>Rails.logger.debug ""<CR>Rails.logger.debug "*"*100<UP><LEFT>
+imap rlog Rails.logger.debug ""<LEFT>
