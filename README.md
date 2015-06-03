@@ -1,4 +1,4 @@
 ```
-$ ln -s ~/vimSettings/vimrc .vimrc
-$ ln -s ~/vimSettings .vim
+$ ln -s ~/vimsettings/vimrc .vimrc
+$ ln -s ~/vimsettings .vim
 ```
